@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;1,100;1,200;1,300&display=swap');
+
+/* ---- Variables ---- */
+:root{
+  --dark-brwn: #6f5f52;
+  --second-brwn:#796758;
+  --light-brwn: #d6cbc2;
+  --med-brwn:#c3ac98;
+}
+
+/* ---- Base Rules ---- */
+body {
+  background: linear-gradient(var(--med-brwn), var(--light-brwn), var(--second-brwn));
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  -webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #210b41;
+}
+h2 {
+  border-bottom: 2px solid var(--dark-brwn);
+  font-family: 'Oxygen', Sans-Serif;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 2px 2px 5px var(--dark-brwn);
+  width:50%;
+}
+p {
+    line-height: 1.6em;
+}
+/* ---- Navigation ---- */
+nav{
+  margin: 5px 10px 0px 10px;
+  height:80px;
+}
+nav img{
+/* width="100" height="50" */
+  width: 150px;
+  height: 75px;
+}
+
+/* ---- Section ---- */
+section{
+  margin: 10vh;
+}
+
+section p{
+  line-height: 1.6em;
+  color: #eee;
+}
+
+/* ---- Landing Image ---- */
+.landing{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height:500px; 
+  background-image: url("../images/cover/3.jpg");
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.landing h1{
+  font-size: 3em;
+}
+.landing p{
+  font-size: 1.25em;
+}
+.services i{
+  /*selects icons within service section and adjusts size and position*/
+  font-size: 25px;
+  /* vertical | horizontal */
+  padding: 5px 10px;
+  
+  /*Resize the container the icon is in*/
+  width: 50px;
+  height: 50px;
+}
+
+.services span{
+  font-size: 1em;
+  display: inline-block;
+}
+
+/* Service Test */
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 600px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+/*   background: radial-gradient(var(--med-brwn),var(--second-brwn)); */
+  text-shadow: #210b41 1px 0 15px;
+    
+}
+.card1{
+  background-image: url("../images/services/diy.jpg");
+  background-size: cover; 
+
+}
+.card2{
+  background-image: url("../images/services/party5.jpg");
+  background-size: cover; 
+}
+.card3{
+  background-image: url("../images/services/cal1.jpg");
+  background-size: 150%; 
+}
+.card4{
+/*   background-image: url("../images/services/tech2.jpg");
+  background-size: cover; 
+  background-position-y: 75%; */
+  background-image: url("../images/services/tech3.jpg");
+  background-size: cover; 
+}
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+/*   color: #ffffff; */
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+/* .team-members{
+  margin: 20px 40px;
+} */
+
+.profiles{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+}
+.profile .profile-img{
+  height: 300px;
+  width: 240px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: 400ms;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile{
+  flex-basis: 260px;
+  margin-left: 15px;
+  margin-right:15px;
+}
+.profile:hover .profile-img{
+  filter:grayscale(0);
+}
+.user-name{
+  text-align: center;
+  font-size: 35px;
+}
+.profile h5{
+  margin:0px;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 13px;
+  color:#ccc;
+  text-align: center;
+}
+.profile p{
+  
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: justify;
+}
+.profile h3{
+  margin-bottom:15px;
+}
+/* ---- About Us ---- */
+
+/* ---- Footer ---- */
+footer{
+  background: #484747;
+  padding: 1em;
+  color: #fff;
+}
+/* -------- Medium Devices -------- */
+@media((min-width:701px) and (max-width:1200px)){
+section{
+  margin: 7vh;
+}
+nav{
+  height:67px;
+}
+nav img{
+  width: 120px;
+  height: 62px;
+}
+h2{
+  width:60%;
+}
+.landing{
+  height:500px;
+}
+.landing h1{
+  font-size: 2.5em;
+}
+.card{
+  width: 400px;
+}
+.profile p{
+  margin: 20px 10px 80px 10px;
+}
+
+
+}
+/* -------- Small Devices -------- */
+@media(max-width:700px){
+section{
+  margin: 5vh;
+}
+nav{
+  height:55px;
+}
+nav img{
+  width: 100px;
+  height: 50px;
+}
+h2{
+  width:90%;
+}
+section .card{
+  padding: 5px;
+}
+.landing{
+  height: 400px;
+}
+.landing h1{
+  font-size: 2em;
+}
+.landing p{
+  font-size: 0.9em;
+}
+.services i{
+  /*selects icons within service section and adjusts size and position*/
+  font-size: 20px;
+  /* vertical | horizontal */
+  padding: 5px 10px;
+  
+  /*Resize the container the icon is in*/
+  width: 20px;
+  height: 20px;
+} 
+.services span{
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.card{
+  margin: 10px;
+  padding: 10px;
+}
+.card h3{
+  margin-top: 10px;
+  padding-top:10px;
+}
+.profiles{
+  flex-direction: column;
+  margin: 10px;
+}
+.profile p{
+  margin: 20px 60px 80px 60px;
+  font-size: 20px;
+}
+}
