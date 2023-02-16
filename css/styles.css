@@ -30,14 +30,66 @@ p {
 }
 /* ---- Navigation ---- */
 nav{
-  margin: 5px 10px 0px 10px;
+/*   margin: 5px 0px 0px 0px; */
+  padding-left: 10px;
+  padding-right: 10px;
   height:80px;
+  position:sticky;
+  top:0;
+  background:var(--med-brwn);
+  z-index:999;
 }
 nav img{
 /* width="100" height="50" */
   width: 150px;
   height: 75px;
 }
+#nav-toggle i{
+  display:none;
+}
+.nav_link{
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 1em;
+  text-align: center;
+}
+.nav_link:hover{
+  color: #fff;
+}
+.nav_link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+a:hover::before {
+  transform: scaleX(1);
+}
+.nav-bar{
+  display:flex;
+  align-items: center;
+  
+}
+nav ul{
+  display:flex;
+  list-style: none;
+}
+#nav-list{
+  margin-left: auto;
+}
+.active{
+  
+  background-color: rgba(121,103,88,0.4);
+/*   transition: 0.3 ease background-color; */
+ } 
 
 /* ---- Section ---- */
 section{
@@ -50,7 +102,7 @@ section p{
 }
 
 /* ---- Landing Image ---- */
-.landing{
+#landing{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -61,13 +113,13 @@ section p{
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.landing h1{
+#landing h1{
   font-size: 3em;
 }
-.landing p{
+#landing p{
   font-size: 1.25em;
 }
-.services i{
+#services i{
   /*selects icons within service section and adjusts size and position*/
   font-size: 25px;
   /* vertical | horizontal */
@@ -78,7 +130,7 @@ section p{
   height: 50px;
 }
 
-.services span{
+#services span{
   font-size: 1em;
   display: inline-block;
 }
@@ -168,9 +220,6 @@ section p{
   grid-row: 4/5;
   align-self: center;
 }
-/* .team-members{
-  margin: 20px 40px;
-} */
 
 .profiles{
   display: flex;
@@ -239,13 +288,17 @@ nav img{
   width: 120px;
   height: 62px;
 }
+.nav_link{
+  font-size: 20px;
+}
+
 h2{
   width:60%;
 }
-.landing{
+#landing{
   height:500px;
 }
-.landing h1{
+#landing h1{
   font-size: 2.5em;
 }
 .card{
@@ -269,22 +322,30 @@ nav img{
   width: 100px;
   height: 50px;
 }
+#nav-toggle i{
+  font-size:26px;
+  display:contents;
+  float:left;
+}
+.nav_link{
+  font-size: 18px;
+}
 h2{
   width:90%;
 }
 section .card{
   padding: 5px;
 }
-.landing{
+#landing{
   height: 400px;
 }
-.landing h1{
+#landing h1{
   font-size: 2em;
 }
-.landing p{
+#landing p{
   font-size: 0.9em;
 }
-.services i{
+#services i{
   /*selects icons within service section and adjusts size and position*/
   font-size: 20px;
   /* vertical | horizontal */
@@ -294,7 +355,7 @@ section .card{
   width: 20px;
   height: 20px;
 } 
-.services span{
+#services span{
   font-size: 0.8em;
   margin-bottom: 10px;
 }
@@ -311,6 +372,7 @@ section .card{
   flex-direction: column;
   margin: 10px;
 }
+
 .profile p{
   margin: 20px 60px 80px 60px;
   font-size: 20px;
