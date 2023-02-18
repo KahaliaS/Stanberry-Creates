@@ -7,7 +7,7 @@
 
 ## Details
 
-Stanberry Creates is a mock landing page built using HTML, CSS, and JS. The focus was to build out the nav using JS. 
+Stanberry Creates is a mock landing page built using HTML, CSS, and JS. This site is responsive. The focus was to build out the nav using JS. 
 
 ## Resourse Sites
 
