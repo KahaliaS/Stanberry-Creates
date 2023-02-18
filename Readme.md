@@ -1,15 +1,20 @@
 # Landing Page Project - Stanberry Creates
 
-### Project
-Mock landing page built with HTML, CSS, and JS
+## Table of Contents
 
-### Help For This Project:
+* [Details](#details)
+* [Resourse Sites](#resourceSites)
 
+## Details
 
-Service Card: https://codepen.io/ericmahoney/pen/oNLMOYw
+Stanberry Creates is a mock landing page built using HTML, CSS, and JS. The focus was to build out the nav using JS. 
 
-Team Section: https://youtu.be/EOpt0HLymis
+## Resourse Sites
 
-Navigation Section: https://youtu.be/flItyHiDm7E
+- Service Card: https://codepen.io/ericmahoney/pen/oNLMOYw
 
-Up Arrow: https://youtu.be/SJVCvnKM_lI
+- Team Section: https://youtu.be/EOpt0HLymis
+
+- Navigation Section: https://youtu.be/flItyHiDm7E
+
+- Up Arrow: https://youtu.be/SJVCvnKM_lI

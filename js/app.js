@@ -23,27 +23,30 @@ const createNav = () =>{
 }
 createNav()
 
-// funtion adds and removes active class from nav items and also checks where on the page we are (which section we are in)
+// // funtion adds and removes active class from nav items and also checks where on the page we are (which section we are in)
 const activateNav =()=>{
-  const navLi = document.querySelectorAll('nav #nav-list ul li')
-window.addEventListener('scroll',()=>{
-  let current ='';
-  sectionElements.forEach(section =>{
-    const topOfSection = section.offsetTop;
-    const heightOfSection = section.clientHeight;
-    if(pageYOffset>=(topOfSection-heightOfSection /3)){
-      current = section.getAttribute('id')
+  const makeActive = () =>{
+    const navLi = document.querySelectorAll('nav #nav-list ul li')
+    let current ='';
+    for (const section of sectionElements) {
+      const box = section.getBoundingClientRect();
+      if (box.top <= 150 && box.bottom >= 150) {
+        current = section.getAttribute('id');
+      } 
     }
-  })
-  navLi.forEach(li =>{
+    navLi.forEach(li =>{
     li.classList.remove("active");
     if(li.classList.contains(current)){
       li.classList.add("active");
     }
-  })
-})
+  }) 
+  }
+
+document.addEventListener("scroll", function() { makeActive();});
+
 }
 activateNav();
+
 
 // function allows us to scroll to a specific section of the site
 const scrollableNav =() =>{
