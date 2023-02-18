@@ -1,4 +1,6 @@
-# Project 
+# Landing Page Project - Stanberry Creates
+
+### Project
 Mock landing page built with HTML, CSS, and JS
 
 ### Help For This Project:
